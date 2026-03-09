@@ -1,0 +1,5 @@
+[
+  {"id":1,"first_name":"Peter","last_name":"Slempers","phone":"6471234321","email":"ps@gmail.com"},
+  {"id":2,"first_name":"John","last_name":"Doe","phone":"4161234321","email":"jd@gmail.com"},
+  {"id":3,"first_name":"Keanu","last_name":"Reeves","phone":"9999999999","email":"theone@gmail.com"}
+]

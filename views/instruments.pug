@@ -1,0 +1,18 @@
+extends common/layout
+
+block layout-content 
+
+  .main-content 
+    h1.page-title Instruments 
+    h2 Instruments 
+    hr
+    div.dashboardGrid
+      each instrument in instruments
+        div.Card
+          h2 #{instrument.name}
+          p brand: #{instrument.brand} 
+          p price: $#{instrument.price}
+          p in stock: #{instrument.stock_quantity}
+          a(href=`/delete-instrument/${instrument.id}`) delete instrument 
+      a(href="/add-instrument").Card#addNew
+        p +

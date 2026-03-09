@@ -1,0 +1,32 @@
+extends common/layout
+
+block layout-content 
+  .main-content
+    h1.page-title Dashboard
+    p.anchorLinks 
+      a(href='#customers') customers
+      a(href='#instruments') instruments
+    h2#customers Customers
+    hr
+    div.dashboardGrid
+      each customer in customers
+        div.Card
+          h2 #{customer.first_name} #{customer.last_name}
+          a(href=`/edit-customer/${customer.id}`) edit customer
+          p phone number: #{customer.phone} 
+          p email: #{customer.email}
+          a(href=`/delete-customer/${customer.id}`) delete customer
+      a(href="/add-customer").Card#addNew 
+        p +
+    h2#instruments Instruments 
+    hr
+    div.dashboardGrid
+      each instrument in instruments
+        div.Card
+          h2 #{instrument.name}
+          p brand: #{instrument.brand} 
+          p price: $#{instrument.price}
+          p in stock: #{instrument.stock_quantity}
+          a(href=`/delete-instrument/${instrument.id}`) delete instrument 
+      a(href="/add-instrument").Card#addNew
+        p +

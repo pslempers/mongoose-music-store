@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Les Paul",
+    "brand": "Gibson",
+    "price": 2999.99,
+    "stock_quantity": 17
+  },
+  {
+    "id": 2,
+    "name": "Les Paul",
+    "brand": "Epiphone",
+    "price": 699.99,
+    "stock_quantity": 48
+  },
+  {
+    "id": 3,
+    "name": "P Bass Ultra",
+    "brand": "Fender",
+    "price": 3239.99,
+    "stock_quantity": 1
+  }
+]

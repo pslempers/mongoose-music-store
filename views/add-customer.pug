@@ -1,0 +1,20 @@
+extends common/layout
+
+block layout-content
+  h1 Create New Customer
+  hr
+  .form-content
+    form(action="/create-customer", method="post")#createNew
+      .form-group 
+        label(for="first_name") First Name:
+        input#first_name(type="text" name="first_name" required)
+      .form-group 
+        label(for="last_name") Last Name: 
+        input#last_name(type="text" name="last_name" required)
+      .form-group 
+        label(for="phone") Phone Number: 
+        input#phone(type="tel" name="phone")
+      .form-group 
+        label(for="email") Email: 
+        input#email(type="email" name="email")
+      button(type="submit") Submit

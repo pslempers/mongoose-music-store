@@ -1,0 +1,18 @@
+extends common/layout
+
+block layout-content 
+
+  .main-content 
+    h1.page-title Customers 
+    h2 Customers 
+    hr
+    div.dashboardGrid
+      each customer in customers
+        div.Card
+          h2 #{customer.first_name} #{customer.last_name}
+          a(href=`/edit-customer/${customer.id}`) edit customer
+          p phone number: #{customer.phone} 
+          p email: #{customer.email}
+          a(href=`/delete-customer/${customer.id}`) delete customer
+      a(href="/add-customer").Card#addNew 
+        p +

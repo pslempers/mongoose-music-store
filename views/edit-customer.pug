@@ -1,0 +1,39 @@
+extends common/layout
+
+block layout-content
+  h1 Edit Existing Customer
+  hr
+  .old-and-new 
+    div
+      h2 Current Customer 
+      hr
+      div.form-content
+        .form-group 
+          p Id: #{customer._id}
+        div.form-group 
+          p First Name: #{customer.first_name} 
+        div.form-group 
+          p Last Name: #{customer.last_name} 
+        div.form-group 
+          p Phone Number: #{customer.phone} 
+        div.form-group 
+          p Email: #{customer.email} 
+    div
+      h2 Update Customer 
+      hr
+      div.form-content
+        form(action="/update-customer/", method="post")#updateExisting
+          input#_id(type="hidden" name="id" value =`${customer._id}`)
+          .form-group 
+            label(for="first_name") First Name:
+            input#first_name(type="text" name="first_name" required)
+          .form-group 
+            label(for="last_name") Last Name: 
+            input#last_name(type="text" name="last_name" required)
+          .form-group 
+            label(for="phone") Phone Number: 
+            input#phone(type="tel" name="phone")
+          .form-group 
+            label(for="email") Email: 
+            input#email(type="email" name="email")
+          button(type="submit") Submit

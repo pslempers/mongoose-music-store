@@ -1,0 +1,20 @@
+extends common/layout
+
+block layout-content
+  h1 Create New Instrument
+  hr
+  .form-content
+    form(action="/create-instrument", method="post")#createNew
+      .form-group 
+        label(for="name") Name:
+        input#name(type="text" name="name" required)
+      .form-group 
+        label(for="brand") Brand: 
+        input#brand(type="text" name="brand" required)
+      .form-group 
+        label(for="price") Price: 
+        input#price(type="decimal" name="price")
+      .form-group 
+        label(for="stock_quantity") Stock Quantity: 
+        input#stock_quantity(type="number" name="stock_quantity")
+      button(type="submit") Submit

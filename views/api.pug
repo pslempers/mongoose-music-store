@@ -1,0 +1,14 @@
+extends common/layout
+
+block layout-content 
+
+  .main-content 
+    h1.page-title API 
+    h2 Customers 
+    hr
+    a(href="api/customers") 
+      button customers.json: {...}
+    h2 Instruments 
+    hr
+    a(href="api/instruments") 
+      button instruments.json: {...}
