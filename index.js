@@ -6,11 +6,17 @@ import "dotenv/config";
 
 import db from "./components/db.js"; //load db.js
 
+// allow cors for calling from my assignment-2 React app
+import cors from "cors";
+
 const __dirname = import.meta.dirname;
 
 //set up Express app
 const app = express();
 const port = process.env.PORT || "8888";
+
+// added for assignment-2
+app.use(cors());
 
 //set up application template engine
 app.set("views", path.join(__dirname, "views")); //the first "views" is the setting name
